@@ -1,0 +1,315 @@
+:root {
+	--shadow-config: 0px 2px 4px 0px;
+	--body-font: 'Quicksand', sans-serif;
+	--button-font: 'Quicksand', sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: var(--body-font);
+	margin: 0 0;
+	font-size: 16px;
+
+	font-weight: 500;
+	line-height: 1.35;
+
+	@media screen and (max-width: 480px) {
+		font-size: 14px;
+	}
+}
+#wrapper {
+	height: 100%;
+	background-color: var(--grey0);
+	color: var(--grey6);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--body-font);
+	color: var(--grey7);
+}
+h1 {
+	font-size: 32px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	@media screen and (max-width: 480px) {
+		font-size: 30px;
+	}
+}
+h2 {
+	font-size: 20px;
+	margin: 5px 5px 10px 5px;
+}
+h3 {
+	font-size: 16px;
+	margin: 5px 5px 5px 5px;
+}
+h1.title {
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 900;
+	font-size: 48px;
+	color: var(--artist4);
+	@media screen and (max-width: 480px) {
+		font-size: 32px;
+	}
+}
+.normal-text h3 {
+	@media screen and (max-width: 480px) {
+		font-size: 14px;
+	}
+}
+
+div.stripe {
+	margin: 0 0;
+	padding: 10px;
+}
+div.stripe-content {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 650px;
+}
+.align-center {
+	text-align: center;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+
+p,
+ul {
+	margin: 5px 5px 5px 5px;
+}
+div.normal-text :not(:last-child) {
+	/* normal-text identifies a section of both header and text */
+	margin-bottom: 10px; /* paragraph break */
+}
+p em,
+p strong,
+p span,
+p a {
+	white-space: nowrap;
+}
+a {
+	color: var(--blue4);
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+.tinytext {
+	font-size: 12px;
+	font-style: italic;
+}
+.disconnected {
+	color: red;
+}
+
+.error {
+	color: red;
+	font-weight: 700;
+}
+div.warning {
+	background-color: var(--gold1);
+	border: solid 1px var(--gold3);
+	color: var(--gold5);
+	border-radius: 5px;
+	margin: 10px 80px;
+	padding: 5px 15px;
+	display: inline-block; /* Div box width to equal inner content width */
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: var(--grey1);
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.block {
+	display: block;
+}
+.fill-space {
+	flex: 1;
+}
+
+.view {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	// Instead of using 'justify-content: center', use auto margin.
+	// The former leads to weird overflow behavior, until browsers support 'safe center'
+	.view-container {
+		margin: auto;
+	}
+}
+#home {
+	#home-menu {
+		min-height: 240px;
+		margin: 12px 0; /* some extra breathing space for the menu */
+		@media screen and (max-width: 425px) {
+			margin: 0;
+		}
+	}
+	#about-content {
+		@media screen and (max-width: 425px) {
+			text-align: left;
+		}
+	}
+}
+
+#rules-content,
+#faq-content {
+	max-width: 30em;
+}
+
+/* ============================================================================
+	Setup room
+============================================================================ */
+
+div#room-setup {
+	div.game-code h1 {
+		font-size: 48px;
+		font-family: var(--button-font);
+		margin-top: 0;
+	}
+	ul.users {
+		height: calc((21px) * 10); /* <li> height * number of rows */
+		margin-top: 0;
+	}
+	li {
+		font-weight: 700;
+		font-family: var(--body-font);
+		color: var(--grey7);
+		line-height: 1.4;
+	}
+}
+
+/* ============================================================================
+	Canvas
+============================================================================ */
+
+#drawing-pad {
+	position: relative;
+	border: solid 4px var(--artist4);
+	box-shadow: 0px 4px 8px -4px var(--artistshade), 0px 4px 12px -4px var(--artistshade);
+	width: 100%;
+}
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+canvas#old-paint {
+	background-color: white;
+	z-index: 1;
+}
+canvas#new-paint {
+	z-index: 2; /* ensures pointer events hit the top layer, not the bottom layer */
+}
+
+/* ============================================================================
+	Game
+============================================================================ */
+
+.canvas-aligned {
+	// max-width set in drawing-pad.js
+	width: 100%;
+}
+
+#game-info {
+	text-align: left;
+	font-family: var(--body-font);
+
+	h1.prompt {
+		color: var(--artist4);
+		font-size: 24px;
+		margin: 0 0 0 0;
+	}
+
+	@media screen and (max-width: 480px) {
+		h1.prompt {
+			font-size: 20px;
+		}
+		h2.current-turn {
+			font-size: 16px;
+		}
+	}
+
+	.current-turn {
+		margin: 0;
+		margin-left: 8px;
+	}
+}
+
+#side-player-statuses {
+	position: absolute;
+	word-break: break-all;
+}
+ul.player-statuses-list {
+	text-align: left;
+	li {
+		display: flex;
+	}
+	li > span,
+	li > svg.feather {
+		align-self: center;
+	}
+	svg.feather {
+		width: 20px;
+		height: 20px;
+		margin-right: 4px;
+	}
+}
+
+#drawing-actions {
+	direction: rtl; /* handle vertical button order for super-narrow viewports */
+
+	#drawing-actions-left {
+		& > * {
+			float: left;
+		}
+	}
+	#drawing-actions-right {
+		& > * {
+			float: right;
+		}
+	}
+}
+
+#conn-overlay {
+	background-color: rgba(240, 240, 240, 0.9);
+	height: 100%;
+	width: 100%;
+
+	/* see position and z-idxes for the drawing pad layers */
+	position: absolute;
+	z-index: 3;
+}
+
+.feather {
+	width: 24px;
+	height: 24px;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+@import 'colors';
+@import 'input';
+@import 'dropup';
+@import 'dialog';

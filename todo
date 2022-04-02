@@ -1,0 +1,23 @@
+proper domain
+dedicated server
+redis store
+validate against incompatible browsers or devices
+quick-join via url
+
+l10n support
+more tests
+more setup options
+rules option in-game, make sure resuming works after updates to game state
+voting system
+colorblind aids
+
+
+Important:
+- Prevent fake artist from voting/don't count their vote
+- Prevent users from voting for themselves
+- Improve scoring system to differentiate scores
+- Add admin/spectator - done (user with name 'admin' is admin), but this messes up the number of turns...
+- Hide 'thing' on all screens, show on hover only (except to FA, obviously)
+- Draw timer?
+
+

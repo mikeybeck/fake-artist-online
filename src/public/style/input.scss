@@ -1,0 +1,109 @@
+.btn {
+	font-family: var(--button-font);
+	letter-spacing: 0.03em;
+	font-size: 16px;
+	font-weight: 700;
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 2px;
+	min-width: 96px;
+	line-height: 40px;
+	padding: 0 16px;
+	margin: 8px;
+	cursor: pointer;
+
+	&.big {
+		min-width: 160px;
+	}
+	&:disabled {
+		border-color: var(--grey1);
+		background-color: var(--grey0);
+		color: var(--grey3);
+		cursor: default;
+	}
+	&.primary:not(:disabled) {
+		background-color: var(--artist4);
+		color: var(--grey0);
+		border-color: var(--artist4);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--artist3);
+				border-color: var(--artist3);
+			}
+		}
+		&:active {
+			background-color: var(--artist5);
+			border-color: var(--artist5);
+		}
+	}
+	&.secondary:not(:disabled) {
+		background-color: var(--grey0);
+		color: var(--blue4);
+		border-color: var(--blue4);
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--blue3);
+				border-color: var(--blue3);
+			}
+		}
+		&:active {
+			color: var(--blue5);
+			border-color: var(--blue5);
+		}
+	}
+	&.tertiary {
+		color: var(--blue4);
+		background: none;
+		border-radius: 0;
+		border: hidden;
+		border-top: solid 2px #0000;
+		border-bottom: solid 2px var(--blue4);
+		padding: 0 2px;
+		line-height: 20px;
+		min-width: 0;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--blue3);
+				border-bottom: solid 2px var(--blue3);
+			}
+		}
+		&:active {
+			color: var(--blue5);
+			border-bottom: solid 2px var(--blue5);
+		}
+	}
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+	border-style: hidden;
+	border-bottom: solid 2px;
+	border-bottom-color: var(--artist4);
+	background-color: var(--grey1);
+	line-height: 40px;
+	text-align: center;
+	margin: 8px;
+	color: var(--grey7);
+	font-weight: 500;
+	&::placeholder {
+		opacity: 0.5;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#in-game {
+		.btn {
+			padding: 0 5px;
+			margin: 5px;
+
+			&.primary:not(.big),
+			&.secondary {
+				min-width: 90px;
+			}
+			&.primary.big {
+				min-width: 150px;
+			}
+		}
+	}
+}

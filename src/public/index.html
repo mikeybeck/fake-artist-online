@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fake Artist Online</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content='An online party game based on Oink Games&apos; "A Fake Artist Goes to New York". Draw with your phone or a mouse.'
+		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+			crossorigin
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js" crossorigin></script>
+		<script src="https://code.jquery.com/pep/0.4.3/pep.min.js" crossorigin></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Quicksand:500,700|Catamaran:900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.bundle.css" />
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<home-view v-if="state.view === 'home'"></home-view>
+			<rules-view v-if="state.view === 'rules'"></rules-view>
+            <faq-view v-if="state.view === 'faq'"></faq-view>
+
+			<setup-view
+				v-if="state.view === 'setup'"
+				:room-code="state.gameState === undefined ? undefined : state.gameState.roomCode"
+				:usernames="usernames"
+			></setup-view>
+
+			<game-view
+				v-if="state.view === 'game'"
+				:game-state="state.gameState"
+				:game-connection="state.gameConnection"
+				:sfx-disabled="state.sfxDisabled"
+			></game-view>
+		</div>
+
+		<script src="index.bundle.min.js"></script>
+	</body>
+</html>

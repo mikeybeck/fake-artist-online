@@ -1,0 +1,39 @@
+{
+	"parserOptions": {
+		"parser": "babel-eslint"
+	},
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"globals": {
+		"io": false,
+		"_": false,
+		"FAO": false,
+		"Vue": false
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:prettier/recommended",
+		"prettier/vue",
+		"plugin:vue/essential"
+	],
+	"ignorePatterns": ["*.bundle.*"],
+	"rules": {
+		"vars-on-top": 0,
+		"no-use-before-define": 0,
+		"new-cap": 0,
+		"no-param-reassign": 0,
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+		"no-undef": "error",
+		"no-unreachable": "warn",
+		"no-unused-vars": "off",
+		"constructor-super": "warn",
+		"valid-typeof": "warn",
+		"no-dupe-keys": "warn"
+	}
+}
