@@ -16,8 +16,5 @@ Important:
 - Prevent fake artist from voting/don't count their vote
 - Prevent users from voting for themselves
 - Improve scoring system to differentiate scores
-- Add admin/spectator - done (user with name 'admin' is admin), but this messes up the number of turns...
 - Hide 'thing' on all screens, show on hover only (except to FA, obviously)
 - Draw timer?
-
-
