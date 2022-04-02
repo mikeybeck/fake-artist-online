@@ -44,7 +44,7 @@
 			></vote-dialog>
 			<div class="stripe">
 				<div id="game-info" class="stripe-content canvas-aligned">
-					<h1 class="prompt" v-show="promptVisible">{{ promptText }}</h1>
+					<h1 class="prompt" v-show="promptVisible"><span v-html="promptText" /></h1>
 					<h2 class="current-turn" :style="{ color: userColor }">{{ whoseTurnText }}</h2>
 				</div>
 			</div>
@@ -222,7 +222,7 @@ export default {
 	},
 	computed: {
 		promptText() {
-			return `${this.gameState.hint}: ${this.gameState.keyword}`;
+			return `${this.gameState.hint}: <span class="showOnHover">${this.gameState.keyword}</span>`;
 		},
 		whoseTurnText() {
 			switch (this.gameState.phase) {
