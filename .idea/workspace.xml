@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f1d0d3d8-6df1-4912-9373-cb988f9dbf3a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo" beforeDir="false" afterPath="$PROJECT_DIR$/todo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/faq-view.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/faq-view.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/game-view.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/game-view.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/player-list-for-vote.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/player-list-for-vote.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +36,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1648871395" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1648871394" />
+                    <option name="lastUsedInstant" value="1648876882" />
                   </RecentBranch>
                 </list>
               </option>
