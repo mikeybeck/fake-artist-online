@@ -12,6 +12,9 @@
     "@types/node": "^10.14.5",
     "@types/socket.io": "^1.4.40",
     "@types/socket.io-client": "^1.4.32",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
     "async": "^2.6.2",
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
@@ -20,10 +23,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.1.2",
     "mocha": "^5.2.0",
-    "vue": "^2.6.10",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "vue": "^2.6.10"
   },
   "engines": {
     "node": "^13.0.0"
