@@ -265,6 +265,13 @@ canvas#new-paint {
 	position: absolute;
 	word-break: break-all;
 }
+
+@media screen and (max-width: 480px) {
+	#side-player-statuses {
+		position: relative;
+	}
+}
+
 ul.player-statuses-list {
 	text-align: left;
 	li {
