@@ -269,6 +269,7 @@ canvas#new-paint {
 @media screen and (max-width: 480px) {
 	#side-player-statuses {
 		position: relative;
+		max-width: 100% !important;
 	}
 }
 
