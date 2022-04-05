@@ -99,7 +99,6 @@
 		</div>
 		<div
 			id="side-player-statuses"
-			v-if="playerStatusesListMaxWidth > 0"
 			:style="{
 				maxWidth: `${playerStatusesListMaxWidth}px`,
 			}"
